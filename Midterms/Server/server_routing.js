@@ -20,7 +20,11 @@ app.get ('/ab*cd', function(req, res) {
     console. log("Got a GET request for /ab*cd*");
     res.send( 'Pattern Match Page' );
 })
-var server = app.listen(4001, function () {
+app.get ('/my_profile', function(req, res) {
+    console. log("Got a GET request for /my_profile");
+    res.send( 'Jimwell Calma' );
+})
+var server = app.listen(4002, function () {
     var host = server. address ().address
     var port = server.address().port
 
